@@ -1,0 +1,238 @@
+* {
+    font-family: 'KoHo', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+.landing {
+    padding-bottom: 38%;
+    background: url("tlo.jpg") no-repeat;
+    background-size: 100% auto;
+    animation: landing-background 6s forwards;
+    position: relative;
+}
+
+@keyframes landing-background {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.landing__text {
+    transform: translateY(320%);
+}
+
+.title {
+    margin-left: 5vw;
+    width: 52vw;
+}
+
+.title__svgPath {
+    clip-path: url(#svgPath);
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: write-title 8s forwards;
+}
+
+@keyframes write-title {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.subtitle {
+    font-size: 2vw;
+    font-weight: bold;
+    transform: translateY(-60%);
+    margin-left: 11vw;
+    opacity: 0;
+    animation: subtitle-opacity 2s 3s forwards;
+}
+
+@keyframes subtitle-opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.landing__arrow {
+    position: absolute;
+    left: 55vw;
+    top: 43vw;
+    animation: arrow-bounce 2s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes arrow-bounce {
+    0% {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(30%);
+        opacity: 0
+    }
+}
+
+.menu__logo {
+    font-family: 'Playball', cursive;
+    color: white;
+    font-size: 5vw;
+}
+
+.menu__logo--main {
+    opacity: 0;
+    transition: opacity 0.5s;
+} 
+
+.menu__item {
+    padding-left: 3vw;
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+.content {
+    background-image: linear-gradient(to bottom right, #ffffff 40%, #cdd5e2);
+}
+
+.content__heading {
+    font-size: 6vw;
+    padding-top: 13vw;
+}
+
+.content__image {
+    filter: drop-shadow(8px 8px 4px grey);
+}
+
+.content__image--about-me {
+    width: 34vw;
+    height: 32vw;
+}
+
+.content__image--paintings {
+    max-width: 350px;
+    height: 250px;
+    padding: 30px 0;
+}
+
+.content__image--paintings:hover {
+    animation: image-scale 0.5s forwards;
+}
+
+@keyframes image-scale {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.content__text--about-me {
+    padding-top: 7vw;
+}
+
+.content__text--contact {
+    padding-top: 6vw;
+    padding-bottom: 12vw;
+    font-size: 2.8vw;
+    text-decoration: none;
+}
+
+.content__link {
+    color: black;
+    font-weight: bold;
+}
+
+.content__link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.content__paintings {
+    padding-top: 20vw;
+    padding-bottom: 10vw;
+}
+
+.content__paintings--oil-paintings {
+    transition: all 0.5s;
+}
+
+.content__paintings--watercolors {
+    transition: all 0.5s 0.2s;
+}
+
+.content__paintings--glass-painting {
+    transition: all 0.5s 0.4s;
+}
+
+.content__paintings--easter-eggs {
+    transition: all 0.5s 0.6s;
+}
+
+.content__figcaption {
+    font-size: 3vw;
+}
+
+/* gallery */
+
+.content__heading--gallery {
+    padding-bottom: 5vw;
+    padding-top: 4vw;
+}
+
+@media (min-width:768px) and (max-width: 992px) {
+    .menu__logo {
+        font-size: 4vw;
+    }
+    .menu__item {
+        font-size: 2.1vw;
+    }
+    .content__heading {
+        font-size: 4.5vw;
+    }
+    .content__image--about-me {
+        width: 24vw;
+        height: 22vw;
+        }
+    .content__text--contact {
+        font-size: 2vw;
+    }
+    .content__figcaption {
+        font-size: 2.2vw;
+    }
+} 
+
+@media all and (min-width:992px) {
+    .menu__logo {
+        font-size: 3vw;
+    }
+    .menu__item {
+        font-size: 1.6vw;
+    }
+    .content__heading {
+        font-size: 3.5vw;
+    }
+    .content__image--about-me {
+    width: 18vw;
+    height: 17vw;
+    }
+    .content__text--contact {
+        font-size: 1.5vw;
+    }
+    .content__figcaption {
+        font-size: 1.5vw;
+    }
+}
