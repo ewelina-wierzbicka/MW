@@ -24,10 +24,7 @@ window.addEventListener('scroll', function() {
 });
 
 
-$(document).on('click', '[data-toggle="lightbox"]', function(event) {
-                event.preventDefault();
-                $(this).ekkoLightbox({
-                alwaysShowClose: true,
-                    gallery_parent_selector: '.gallery',
-            });
-});
+lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true
+  })
