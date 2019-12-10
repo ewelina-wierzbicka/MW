@@ -26,5 +26,6 @@ window.addEventListener('scroll', function() {
 
 lightbox.option({
     'resizeDuration': 200,
-    'wrapAround': true
+    'wrapAround': true,
+    'showImageNumberLabel': false
   })
